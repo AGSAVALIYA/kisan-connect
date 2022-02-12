@@ -9,11 +9,11 @@ function Post() {
             <div className="product-image">
                 <img src = {login} alt = 'img'/>
             </div>
+        </div>
+        <div className="div2">
             <div className="product-name">
                 <h3>Wheat</h3>
             </div>
-        </div>
-        <div className="div2">
             <div className="product-details">
                 <p>Details about the post will go here, they will only cover this space and post should be opened in order to see the entire post.</p>
             </div>

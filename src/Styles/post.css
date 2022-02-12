@@ -21,9 +21,15 @@
     border-bottom: 1px solid black;
 }
 .product-name {
-    text-align: center;
-    color: #6FCADE
+    color: #6FCADE;
+    align-self: flex-start;
+    margin-bottom: 15px;
 }
+
+.product-details{
+  margin-bottom: auto;
+}
+
 .div1 {
     display: flex;
     flex-direction: column;

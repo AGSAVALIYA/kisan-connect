@@ -18,46 +18,63 @@ function Register({setEmail, setPassword, handleSubmit}) {
 
     return (
         <div className='signin-main mv5'>
-            <div className=''>
-                <img src="https://i.ibb.co/z4Kw4sH/login.png" alt="Farmer" width="400"/>
-            </div>
-            <div className=' tc'> 
-                <article className="br3 box ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-3 tc  center">
-                    <main className="pa4 black v-mid">
-                        <div className="measure">
-                            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                            <legend className="f1 fw6 ph0 mh0">Register</legend>
-                            <div className="mt3">
-                                <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                                <input
-                                    className="pa2 input-reset ba b--near-black bg-transparent hover-black w-100"
-                                    type="email"
-                                    name="email-address"
-                                    id="email-address"
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </div>
-                            <div className="mv3">
-                                <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                                <input
-                                    className="b pa2 input-reset ba b--near-black bg-transparent hover-black w-100"
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
-                            </div>
-                            </fieldset>
-                            <div className="">
-                            <button
-                                className="b ph3 pv2 input-reset ba b--near-black black bg-transparent grow pointer f6 dib"
-                                onClick={handleSubmit}
-                            >Register</button>
-                            </div>
+            <div className="profile-pic">
+            <input type="file" className="circle">
+
+        </input>
+        </div>
+
+        <div className="inputs">
+            <table className="table">
+                <tr>
+                    <td>
+                        <input type="text" name="name" placeholder="Name*" className="name" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="email" name="email" placeholder="Email*" className="email" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" name="password" placeholder="Password*" className="password" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="address" placeholder="Address*" className="address"required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="phone" placeholder="Phone*" className="phone" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="age" placeholder="Age*" className="age" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="gender" required>  
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Prefer not to say</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div className="submit">
+
+                            <button className="submit-btn">Register</button>
                         </div>
-                    </main>
-                </article>
-            </div>  
+                    </td>   
+                </tr>
+            </table>
+        </div>
             <div className='signinbg'>&nbsp;</div>
         </div>
     )

@@ -56,6 +56,9 @@ const Signin = ({setEmail, setPassword, handleSubmit}) => {
                       >Sign In</button>
                       </div>
                   </div>
+                  <div className="lh-copy mt3">
+                  <p className="f6 link dim db black pointer">Register</p>
+                  </div>
               </main>
           </article>
       </div>  

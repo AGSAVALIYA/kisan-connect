@@ -1,3 +1,9 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dashbg{
     position: fixed;
     top: 0px; left: 0px; 
@@ -13,13 +19,30 @@
     justify-content: center;
 }
 
-h1{
-    text-align: center;
-}
-
 .dashhead{
     display: flex;
     flex-direction: row;
-    height: 50px;
-    text-align: center;
+    align-items: center;
+}
+
+.postlistHeader{
+    font-weight: lighter;
+    align-self: flex-start;
+}
+
+.createPostButton{
+    border: none;
+    background-color: #6FCADE;
+    border-radius: 10px;
+    padding: 12px;
+    margin-left: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.plusIcon{
+    margin-right: 10px;
 }

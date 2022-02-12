@@ -17,10 +17,11 @@ nav {
 }
 
 .brand-name {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0.5rem;
     padding: 5px;
 }
+
 .hamburger {
     cursor: pointer;
     font-size: 2rem;
