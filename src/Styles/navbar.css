@@ -13,8 +13,9 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    margin-bottom: 40px;
+    height: 40px;
 }
+
 .brand-name {
     font-size: 1.5rem;
     margin: 0.5rem;
@@ -55,8 +56,9 @@ nav {
         flex-direction: column;
         text-align: center;
         position: fixed;
-        top: 42px;
+        top: 40px;
         background-color: #6FCADE;
+        border-top: 2px solid #6abed1;
     }
     .navLinks a {
         padding: 0.5rem 1rem;
@@ -64,7 +66,5 @@ nav {
     .hamburger {
         display: flex;
     }
-    .hide {
-        display: none;
-    }
+
 }
