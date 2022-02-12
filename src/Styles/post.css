@@ -6,6 +6,7 @@
 .product-cards {
     width: 720px;
     height: auto;
+    min-height: 200px;
     max-height: 500px;
     border-radius: 7px;
     display: flex;

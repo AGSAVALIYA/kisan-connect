@@ -16,3 +16,10 @@
 h1{
     text-align: center;
 }
+
+.dashhead{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    text-align: center;
+}

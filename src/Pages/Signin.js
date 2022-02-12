@@ -1,9 +1,21 @@
 import react from 'react';
 import 'tachyons';
-
+import {useNavigate} from 'react-router-dom'
+import {useEffect} from 'react'
 import '../Styles/signin.css';
 
 const Signin = ({setEmail, setPassword, handleSubmit}) => {
+
+  let navigate = useNavigate()
+
+  useEffect(() => {
+      let authToken = sessionStorage.getItem('Auth Token');
+  
+      if(authToken){
+        navigate('/')
+      }
+
+  }, [])
   
     return(
       <div className='signin-main mv5'>
