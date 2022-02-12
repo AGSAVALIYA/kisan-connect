@@ -15,10 +15,9 @@ function NewPostMenu() {
             title: title,
             details: details,
             price: price,
-            date: date
+            date: date,
+            userID: sessionStorage.getItem('User ID')
         });
-
-        console.log(docRef.id)
     }
 
 

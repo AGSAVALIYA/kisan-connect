@@ -1,11 +1,14 @@
-import react from 'react';
+import react, {useState} from 'react';
 import 'tachyons';
 import {useNavigate} from 'react-router-dom'
 import {useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import '../Styles/signin.css';
 
-const Signin = ({setEmail, setPassword, handleSubmit}) => {
+const Signin = ({handleSubmit}) => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
   let navigate = useNavigate()
 
@@ -53,7 +56,7 @@ const Signin = ({setEmail, setPassword, handleSubmit}) => {
                       <div className="">
                       <button
                           className="b ph3 pv2 input-reset ba b--near-black black bg-transparent grow pointer f6 dib"
-                          onClick={handleSubmit}
+                          onClick={() => handleSubmit(1, email, password)}
                       >Sign In</button>
                       </div>
                   </div>

@@ -28,6 +28,7 @@ function Dashboard() {
     }, [])
 
     const openNewPostMenu = () => {
+      console.log(sessionStorage.getItem('User email'))
       setNewPostMenuOpen(!newPostMenuOpen);
     }
 
