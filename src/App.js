@@ -24,7 +24,7 @@ function App() {
     if(id === 2){
       createUserWithEmailAndPassword(authentication, email, password)
       .then(res => {
-        navigate('./');
+        navigate('/');
         sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken);
       })
       .catch(err => {
@@ -37,7 +37,7 @@ function App() {
     if(id == 1){
       signInWithEmailAndPassword(authentication, email, password)
       .then(res => {
-        navigate('./');
+        navigate('/');
         sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken);
       })
       .catch(err => {

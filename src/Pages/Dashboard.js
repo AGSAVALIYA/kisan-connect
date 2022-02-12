@@ -37,9 +37,11 @@ function Dashboard() {
         <div>
           <div className='dashhead'>
             <h1 className='postlistHeader pa2 w-50'>My Posts</h1>
+            
             <button className='createPostButton' onClick = {openNewPostMenu}> <FeatherIcon className='plusIcon' icon="plus" color="#FFF" size="24" />New Post</button>
           </div>
-          {newPostMenuOpen && <NewPostMenu/>}
+            {newPostMenuOpen && <NewPostMenu/>}
+          
           <div className='post-list'> 
             <Post />
             <Post />

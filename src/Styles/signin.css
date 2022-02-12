@@ -21,3 +21,13 @@
     z-index: -1;
     background: linear-gradient(90deg, rgb(11, 199, 206) 16%, rgba(200,222,219,1) 68%, rgba(255,255,255,1) 100%);
 }
+
+.reglink{
+    text-decoration: none;
+    color: black;
+    padding: 0.8rem;
+}
+.reglink:hover{
+    background-color: #6abed1;
+    color: black !important;
+}

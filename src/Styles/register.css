@@ -1,0 +1,96 @@
+.register-main{
+    background: rgb(0,212,213);
+    background: linear-gradient(90deg, rgb(11, 199, 206) 16%, rgba(200,222,219,1) 68%, rgba(255,255,255,1) 100%);
+    font-family: Monospace, Helvetica, sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.profile-pic {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:auto;    
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(90deg, #015eea 40%, #00c0fa 100%);
+    color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.profile-pic > input {
+    display: none;
+}
+
+.circle::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: 'Upload picture';
+    font-family: monospace;
+    font-size: 1.0rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+table {
+    width: 400px;
+    padding: 10 px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+td {
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+}
+
+.name, .password, .email, .address, .phone, .age {
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #FFFFFF99;
+    border-radius: 5px;
+    border: 1px white;
+}
+
+select {
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #FFFFFF99;
+    border-radius: 5px;
+    border: 1px white;
+}
+
+
+.submit {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, #ed3b4b 40%, #ff736d 100%);
+    color: white;
+    font-family: monospace;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px white;
+}

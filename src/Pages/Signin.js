@@ -2,6 +2,7 @@ import react from 'react';
 import 'tachyons';
 import {useNavigate} from 'react-router-dom'
 import {useEffect} from 'react'
+import {Link} from 'react-router-dom';
 import '../Styles/signin.css';
 
 const Signin = ({setEmail, setPassword, handleSubmit}) => {
@@ -57,7 +58,7 @@ const Signin = ({setEmail, setPassword, handleSubmit}) => {
                       </div>
                   </div>
                   <div className="lh-copy mt3">
-                  <p className="f6 link dim db black pointer">Register</p>
+                       <p className="f8 link dim db black pointer"><Link className="reglink" to="/register">Register</Link></p>
                   </div>
               </main>
           </article>

@@ -5,6 +5,8 @@
 }
 nav {
     background-color: #6FCADE;
+    background: linear-gradient(90deg, #f9c449 10%, #c82090 100%);
+    /* background: linear-gradient(90deg, #38f8d4 30%, #32717a 100%); */
     display: flex;
     justify-content: space-between;
     align-items: center;
