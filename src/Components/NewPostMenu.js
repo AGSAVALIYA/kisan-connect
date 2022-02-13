@@ -9,7 +9,6 @@ function NewPostMenu({setNewPostMenuOpen}) {
     const [details, setDetails] = useState('')
     const [price, setPrice] = useState(0)
     const [date, setDate] = useState(null);
-    const [userID, setUserID] = useState('');
     
     const db = getFirestore();
 

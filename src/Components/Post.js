@@ -5,11 +5,11 @@ import login from '../login.png'
 function Post({ title, details, date, price }) {
   return (
     <div className="product-cards">
-        <div className="div1">
+        {/*<div className="div1">
             <div className="product-image">
                 <img src = {login} alt = 'img'/>
             </div>
-        </div>
+        </div>*/}
         <div className="div2">
             <div className="product-name">
                 <h3>{title}</h3>

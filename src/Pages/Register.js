@@ -3,7 +3,7 @@ import '../Styles/signin.css';
 import { useNavigate, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../Styles/register.css';
-
+import 'tachyons';
 
 function Register({ handleSubmit }) {
     const [name, setName] = useState('');
@@ -27,7 +27,7 @@ function Register({ handleSubmit }) {
 
     return (
         <div className='register-main'>
-            <div className="profile-pic">
+            <div className="profile-pic grow">
                 <label htmlFor="img">Click me to upload image</label>
                 <input type="file" id='img' className="circle" />
             </div>
@@ -84,9 +84,9 @@ function Register({ handleSubmit }) {
                         </tr>
                         <tr>
                             <td>
-                            <div>
-                                <Link className="login-btn" to="/signin">Already have an account? Login</Link>
-                            </div>
+                            
+                                <Link className="login-btn grow" to="/signin">Already have an account? Login</Link>
+                            
                             </td>
                         </tr>
                     </tbody>
