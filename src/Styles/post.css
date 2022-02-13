@@ -87,21 +87,41 @@
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-        min-width: 570px;
+        /* min-width: 570px; */
     }
     .product-name {
         margin: auto;
         padding-bottom: 10px;
      }
 }
-@media (max-width: 576px) {
+@media (min-width:401px) and (max-width: 576px) {
     .product-cards {
         width: 75%;
         display: flex;
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-        min-width: 300px;
+        /* min-width: 300px; */
+    }
+    .product-name {
+        margin: auto;
+        padding-bottom: 10px;
+     }
+     .div3 {
+         display: flex;
+         flex-direction: column;
+     }
+     .product-price {
+         padding-bottom: 5px;
+     }
+}
+ @media (max-width:400px) { 
+    .product-cards {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
     }
     .product-name {
         margin: auto;

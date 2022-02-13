@@ -1,8 +1,33 @@
 .register-main{
-    background: rgb(0,212,213);
-    background: linear-gradient(90deg, rgb(11, 199, 206) 16%, rgba(200,222,219,1) 68%, rgba(255,255,255,1) 100%);
+    /* background: rgb(0,212,213); */
+    /* background: linear-gradient(90deg, rgb(11, 199, 206) 16%, rgba(200,222,219,1) 68%, rgba(255,255,255,1) 100%); */
+    
     font-family: Monospace, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(../../public/bg.png);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
+
+
+
+.register-container{
+    text-align: center;
+    align-items: center;
+}
+
+.reg-table{
+    background: #FFFFFF99;
+    border-color: #FFFFFF99;
+    width: 450px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:auto;
+    padding: 0;
+}
+
 
 .header {
     text-align: center;
@@ -51,7 +76,6 @@ table {
 
 td {
     padding: 5px;
-    width: 100%;
     height: 50px;
 }
 
@@ -62,7 +86,7 @@ td {
     font-family: monospace;
     padding-left: 10px;
     padding-right: 10px;
-    background: #FFFFFF99;
+    background: #ffffffce;
     border-radius: 5px;
     border: 1px white;
 }
@@ -74,7 +98,7 @@ select {
     font-family: monospace;
     padding-left: 10px;
     padding-right: 10px;
-    background: #FFFFFF99;
+    background: #ffffffce;
     border-radius: 5px;
     border: 1px white;
 }
@@ -117,3 +141,25 @@ select {
     
     transform: scale(1.05);
 } */
+
+@media screen and (max-width: 900px) {
+    .register-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    .farmer-img{
+        height: 100px;
+        width: 130px;
+    }
+    .reg-table{
+        width: auto;
+        padding: 0px;
+    }
+    .name, .password, .email, .address, .phone, .age, select{
+        width: 80%;
+
+    }
+}

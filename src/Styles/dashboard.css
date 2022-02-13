@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
 }
 
 .dashbg{
@@ -50,4 +51,42 @@
 
 .plusIcon{
     margin-right: 10px;
+}
+
+.dashContainer{
+     min-width: 500px; 
+}
+@media (min-width: 577px) and (max-width: 991px) {
+    .dashhead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .createPostButton {
+        margin-left: auto;
+        margin-right: auto;
+        }
+}
+@media (min-width:401px) and (max-width:576px) {
+    .dashhead {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+    .createPostButton {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+@media (max-width:400px) {
+    .dashhead {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+    .createPostButton {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
 }

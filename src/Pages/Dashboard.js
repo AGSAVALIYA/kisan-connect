@@ -52,7 +52,7 @@ function Dashboard() {
     return (
       <div className='dashboard'>
         <Navbar/>
-        <div>
+        <div className = 'dashContainer'>
           <div className='dashhead'>
             <h1 className='postlistHeader pa2 w-50'>My Posts</h1>
             

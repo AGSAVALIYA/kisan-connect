@@ -12,7 +12,7 @@ function Post({id, title, details, date, price, deletable }) {
 
     const deletePost = async () => {
         await deleteDoc(doc(db, 'posts', id));
-        navigate('/');
+        
     }
 
   return (

@@ -42,10 +42,6 @@ function Home() {
                     </div>
                     <PostList search = {search}/>
                 </div>
-                {/*<div className='bottomButtons'>
-                    <button className='bottomButton prev'>{"<"}</button>
-                    <button className='bottomButton next'>{">"}</button>
-                </div>*/}
                 <div className='homebg'>&nbsp;</div>
             </div>
         </div>

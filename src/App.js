@@ -96,15 +96,15 @@ function App() {
   return (
     <div className="App">
       <ToastContainer/>
-      <div className='container'>
-        <Routes>
-          <Route className="auth" path = '/register' element = {<Register handleSubmit = {handleSubmit}/>}/>
-          <Route className="auth" path = '/signin' element = {<Signin handleSubmit = {handleSubmit}/>}/>
-          <Route path = '/dashboard' element = {<Dashboard/>}/>
-          <Route exact path = '/' element = {<Home/>}/>
-          <Route path = '*' element = {<Home/>}/>
-        </Routes>
-      </div>
+        <div className='container'>
+          <Routes>
+            <Route path = '/register' element = {<Register handleSubmit = {handleSubmit}/>}/>
+            <Route path = '/signin' element = {<Signin handleSubmit = {handleSubmit}/>}/>
+              <Route path = '/dashboard' element = {<Dashboard/>}/>
+              <Route exact path = '/' element = {<Home/>}/>
+              <Route path = '*' element = {<Home/>}/>
+          </Routes>
+        </div>     
     </div>
   );
 }

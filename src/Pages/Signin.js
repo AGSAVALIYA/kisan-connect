@@ -24,10 +24,8 @@ const Signin = ({handleSubmit}) => {
     return(
       <div className='signin-container'>
           <div className='signin-main mv5'>
-      <div className=''>
-          <img src="https://i.ibb.co/z4Kw4sH/login.png" alt="Farmer" width="400"/>
-      </div>
-      <div className=' tc'> 
+          <img class="farmer-img" src="https://i.ibb.co/z4Kw4sH/login.png" alt="Farmer" width="400"/>
+      <div className='tc'> 
           <article className="br3 box ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-3 tc  center">
               <main className="pa4 black v-mid">
                   <div className="measure">

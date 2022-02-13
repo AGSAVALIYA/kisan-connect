@@ -1,7 +1,8 @@
 * {
-    margin: 0;
+    
     padding: 0;
     box-sizing: border-box;
+    
 }
 nav {
     background-color: #6FCADE;
@@ -16,7 +17,9 @@ nav {
     left: 0;
     right: 0;
     height: 50px;
-    box-shadow: 10px 10px 25px 10px rgba(136, 136, 136, 0.25);
+    box-shadow: 10px 10px 25px 10px rgba(92, 92, 92, 0.25);
+    margin-bottom: 100px !important;
+   
 }
 
 .brand-name {
@@ -40,14 +43,21 @@ nav {
 .navLinks {
     display: flex;
     font-size: 20px;
-    transition: all 0.5s;
 }
+
 .link {
     text-decoration: none;
     color: white;
     padding: 0.8rem;
+    background-color: transparent;
 }
-.navLinks a:hover {
+
+.link:active, .link:focus{
+    outline: 0;
+    border: 0;
+}
+
+.link:hover {
     background-color: #6abed1;
 }
 

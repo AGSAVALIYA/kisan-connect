@@ -26,14 +26,15 @@ function Register({ handleSubmit }) {
     }, [])
 
     return (
-        <div className='register-main'>
-            <div className="profile-pic grow">
+        <div className='register-main tc'>
+            {/*<div className="profile-pic grow">
                 <label htmlFor="img">Click me to upload image</label>
                 <input type="file" id='img' className="circle" />
-            </div>
-
-            <div className="inputs">
-                <table className="table">
+        </div>*/}
+            <div className='register-container flex flex-row tc mv5 ml6'>
+            <div><img class="farmer-img" src="https://i.ibb.co/z4Kw4sH/login.png" alt="Farmer" width="400"/></div>
+            <div className="inputs tc dib pa4 reg-table tc br3">
+                 <table className="table tc">
                     <tbody>
                         <tr>
                             <td>
@@ -93,8 +94,10 @@ function Register({ handleSubmit }) {
 
                 </table>
                 
+                
             </div>
-            <div className='signinbg'>&nbsp;</div>
+            </div>
+            <div className='register-bg'>&nbsp;</div>
         </div>
     )
 }
