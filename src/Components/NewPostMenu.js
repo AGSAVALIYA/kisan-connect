@@ -1,28 +1,39 @@
 import React, {useState} from 'react'
 import '../Styles/newPostMenu.css'
 import {getFirestore, collection, addDoc} from 'firebase/firestore';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function NewPostMenu() {
+function NewPostMenu({setNewPostMenuOpen}) {
     const [title, setTitle] = useState('')
     const [details, setDetails] = useState('')
     const [price, setPrice] = useState(0)
     const [date, setDate] = useState(null);
+    const [userID, setUserID] = useState('');
     
     const db = getFirestore();
-    
+
     const createNewPost = async () => {
-        const docRef = await addDoc(collection(db, "posts"), {
-            title: title,
-            details: details,
-            price: price,
-            date: date,
-            userID: sessionStorage.getItem('User ID')
-        });
+        if(title, details, price, date){
+            setNewPostMenuOpen(false);
+    
+            await addDoc(collection(db, "posts"), {
+                title: title,
+                details: details,
+                price: price,
+                date: date,
+                userEmail: sessionStorage.getItem('User Email')
+            });
+        }else{
+            toast.error('All required fields are not filled')
+        }
+
     }
 
 
     return (
         <div className='newPostMenu'>
+            <ToastContainer/>
             <div className='newPostMenuTitle'>Create New Post</div>
             <div className='inputFields'>
                 <div className='inputFieldLabel'>Crop Name</div>

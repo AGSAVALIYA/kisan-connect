@@ -20,13 +20,12 @@
     color: white;
     border-radius: 50%;
     border: 2px solid black;
-    cursor: pointer;
 }
 .profile-pic > input {
     display: none;
 }
 
-.circle::before {
+/* .circle::before {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,8 +35,7 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    cursor: pointer;
-}
+} */
 
 
 table {
@@ -93,4 +91,15 @@ select {
     cursor: pointer;
     border-radius: 10px;
     border: 1px white;
+}
+
+.login-btn {
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.login-btn:visited {
+    color: black;
 }

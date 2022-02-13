@@ -5,7 +5,7 @@
 }
 nav {
     background-color: #6FCADE;
-    background: linear-gradient(90deg, #f9c449 10%, #c82090 100%);
+    /*background: linear-gradient(90deg, #f9c449 10%, #c82090 100%);*/
     /* background: linear-gradient(90deg, #38f8d4 30%, #32717a 100%); */
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@ nav {
     cursor: pointer;
     font-size: 2rem;
     color: white;
-    margin: 0.3rem;
+    margin: 0.5rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -55,7 +55,11 @@ nav {
 .logoutButton:hover{
     background-color: #6abed1;
 }
-
+button {
+    border: 0px;
+    outline: 0px;
+    background-color: #6FCADE;
+}
 @media (max-width:576px) {
     .nav {
         flex-direction: column;
@@ -71,7 +75,7 @@ nav {
         flex-direction: column;
         text-align: center;
         position: fixed;
-        top: 60px;
+        top: 50px;
         background-color: #6FCADE;
         border-top: 2px solid #6abed1;
     }
@@ -81,5 +85,7 @@ nav {
     .hamburger {
         display: flex;
     }
-
+    .hide {
+        display: none;
+    }
 }

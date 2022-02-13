@@ -11,7 +11,7 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 import {useEffect} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {getFirestore, collection, addDoc} from 'firebase/firestore';
+import {getFirestore, collection, addDoc, getDocs, query, where, limit} from 'firebase/firestore';
 
 function App() {
   const db = getFirestore();
@@ -31,7 +31,7 @@ function App() {
               gender: gender
           });
 
-          sessionStorage.setItem('User Email', email)
+          sessionStorage.setItem('User Id', docRef.id)
       }else{
           toast.error('All the required fields are not filled')
           }
@@ -63,16 +63,23 @@ function App() {
       .then(res => {
         navigate('/');
         sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken);
-        sessionStorage.setItem('User Email', email)
+
+        const usersRef = collection(db, 'users');
+        const q = query(usersRef, where("email", "==", email), limit(1));
+        getDocs(q).then(querySnapshot => {
+          querySnapshot.forEach((doc) => {
+              console.log(doc.id)
+              sessionStorage.setItem('User Id', doc.id)
+              console.log(sessionStorage.getItem('User Id'))
+          })
+        })
       })
       .catch(err => {
         if (err.code === 'auth/wrong-password') {
           toast.error('Please check the Password');
-          console.log('wp')
         }
         if (err.code === 'auth/user-not-found') {
           toast.error('Please check the Email');
-          console.log('unf')
         }
       })
     }
@@ -91,8 +98,8 @@ function App() {
       <ToastContainer/>
       <div className='container'>
         <Routes>
-          <Route path = '/register' element = {<Register handleSubmit = {handleSubmit}/>}/>
-          <Route path = '/signin' element = {<Signin handleSubmit = {handleSubmit}/>}/>
+          <Route className="auth" path = '/register' element = {<Register handleSubmit = {handleSubmit}/>}/>
+          <Route className="auth" path = '/signin' element = {<Signin handleSubmit = {handleSubmit}/>}/>
           <Route path = '/dashboard' element = {<Dashboard/>}/>
           <Route exact path = '/' element = {<Home/>}/>
           <Route path = '*' element = {<Home/>}/>

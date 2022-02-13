@@ -22,7 +22,8 @@ const Signin = ({handleSubmit}) => {
   }, [])
   
     return(
-      <div className='signin-main mv5'>
+      <div className='signin-container'>
+          <div className='signin-main mv5'>
       <div className=''>
           <img src="https://i.ibb.co/z4Kw4sH/login.png" alt="Farmer" width="400"/>
       </div>
@@ -67,7 +68,8 @@ const Signin = ({handleSubmit}) => {
           </article>
       </div>  
       <div className='signinbg'>&nbsp;</div>
-  </div>
+     </div>
+      </div>
     );
 }
 

@@ -7,12 +7,16 @@ import 'tachyons';
 import {useNavigate} from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import NewPostMenu from '../Components/NewPostMenu';
+import {query, getDocs, where, collection, getFirestore} from 'firebase/firestore';
  
 function Dashboard() {
+
+    const db = getFirestore();
 
     let navigate = useNavigate();
 
     const [newPostMenuOpen, setNewPostMenuOpen] = useState(false);
+    const [dashboardposts, setDashboardPosts] = useState([]);
 
     useEffect(() => {
         let authToken = sessionStorage.getItem('Auth Token');
@@ -24,13 +28,26 @@ function Dashboard() {
         if(!authToken){
             navigate('./signin');
         }
-
+        
+        getDashboardPosts();
     }, [])
 
     const openNewPostMenu = () => {
-      console.log(sessionStorage.getItem('User email'))
       setNewPostMenuOpen(!newPostMenuOpen);
     }
+    const postsRef = collection(db, 'posts');
+    const q = query(postsRef, where('userEmail', '==', sessionStorage.getItem('User Email')));
+      const getDashboardPosts = async () => {
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach(doc => {
+        setDashboardPosts(arr => [...arr ,doc.data()])
+      })
+    }
+    const dashboardpostarray = dashboardposts.map((dashboardposts)=>{
+      return(
+             <Post key={dashboardposts.id} title={dashboardposts.title} details={dashboardposts.details} price={dashboardposts.price} date={dashboardposts.date}/>
+             )
+           })
 
     return (
       <div className='dashboard'>
@@ -41,11 +58,10 @@ function Dashboard() {
             
             <button className='createPostButton' onClick = {openNewPostMenu}> <FeatherIcon className='plusIcon' icon="plus" color="#FFF" size="24" />New Post</button>
           </div>
-            {newPostMenuOpen && <NewPostMenu/>}
+            {newPostMenuOpen && <NewPostMenu setNewPostMenuOpen = {setNewPostMenuOpen}/>}
           
           <div className='post-list'> 
-            <Post />
-            <Post />
+           {dashboardpostarray}
           </div> 
         </div>
         <div className='dashbg'>&nbsp;</div>
@@ -53,4 +69,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default Dashboard;

@@ -3,6 +3,7 @@ import '../Styles/home.css'
 import Post from '../Components/Post';
 import {useNavigate} from 'react-router-dom'
 import Navbar from '../Components/Navbar';
+import PostList from '../Components/PostList';
 
 function Home() {
 
@@ -26,13 +27,7 @@ function Home() {
             <Navbar/>
             <div className='home'>
                 <div className='post-list'>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
+                    <PostList />
                 </div>
                 <div className='homebg'>&nbsp;</div>
             </div>
