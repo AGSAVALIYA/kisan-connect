@@ -23,7 +23,9 @@
     margin:auto;
     padding: 0;
 }
-
+.reg-head{
+    text-align: center;
+}
 
 .header {
     text-align: center;

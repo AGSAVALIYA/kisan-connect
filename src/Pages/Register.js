@@ -35,6 +35,7 @@ function Register({ handleSubmit }) {
             <div><img class="farmer-img" src="https://i.ibb.co/z4Kw4sH/login.png" alt="Farmer" width="400"/></div>
             <div className="inputs tc dib pa4 reg-table tc br3">
                  <table className="table tc">
+                     <th className='reg-head'><legend className="f1 fw6 ph0 mh0 white">Register</legend></th>
                     <tbody>
                         <tr>
                             <td>
