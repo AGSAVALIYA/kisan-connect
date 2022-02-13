@@ -32,7 +32,7 @@
 
 .createPostButton{
     border: none;
-    background-color: #6FCADE;
+    background-color: #6fcade;
     border-radius: 10px;
     padding: 12px;
     margin-left: auto;
@@ -42,6 +42,10 @@
     justify-content: center;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.createPostButton:hover{
+    background-color: #6abed1;
 }
 
 .plusIcon{

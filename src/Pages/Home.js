@@ -4,12 +4,12 @@ import Post from '../Components/Post';
 import {useNavigate} from 'react-router-dom'
 import Navbar from '../Components/Navbar';
 import PostList from '../Components/PostList';
+import FeatherIcon from 'feather-icons-react';
 
 function Home() {
 
     let navigate = useNavigate();
 
-    const [userInput, setUserInput] = useState('');
     const [search, setSearch] = useState('');
 
     useEffect(() => {
@@ -31,14 +31,14 @@ function Home() {
             <div className='home'>
                 <div className='post-list'>
                     <div className='searchBox'>
+                        <FeatherIcon className='menu searchIcon' icon="search" color="#f5f5f5"  size={34}/> 
                         <input 
                             type='text' 
                             placeholder='Enter the name or description of the crop...' 
                             className='searchField'
-                            onChange={e => setUserInput(e.target.value)}
-                            value={userInput}
+                            onChange={e => setSearch(e.target.value)}
+                            value={search}
                         />
-                        <button className='searchButton' onClick={() => setSearch(userInput)}>Search</button>
                     </div>
                     <PostList search = {search}/>
                 </div>

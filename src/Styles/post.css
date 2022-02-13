@@ -14,6 +14,8 @@
     margin-top: 25px;
     background-color: whitesmoke;
     padding: 20px;
+    flex-direction: column;
+    min-width: 75%;
 }
 .product-image img{
     height: 65px;
@@ -24,7 +26,22 @@
     color: #6FCADE;
     align-self: flex-start;
     margin-bottom: 15px;
+    display: flex;
+    width: 100%;
 }
+
+.deleteButton{
+    background-color: rgb(196, 0, 0);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.deleteButton:hover{
+    background-color: rgb(151, 0, 0);
+}
+
 .product-details{
   margin-bottom: auto;
 }
@@ -68,6 +85,9 @@
         width: 75%;
         display: flex;
         flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 570px;
     }
     .product-name {
         margin: auto;
@@ -79,6 +99,9 @@
         width: 75%;
         display: flex;
         flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 300px;
     }
     .product-name {
         margin: auto;

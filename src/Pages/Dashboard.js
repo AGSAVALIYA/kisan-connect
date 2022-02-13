@@ -40,12 +40,12 @@ function Dashboard() {
       const getDashboardPosts = async () => {
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach(doc => {
-        setDashboardPosts(arr => [...arr ,doc.data()])
+        setDashboardPosts(arr => [...arr ,{id: doc.id, data: doc.data()}])
       })
     }
     const dashboardpostarray = dashboardposts.map((dashboardposts)=>{
       return(
-             <Post key={dashboardposts.id} title={dashboardposts.title} details={dashboardposts.details} price={dashboardposts.price} date={dashboardposts.date}/>
+             <Post key={dashboardposts.id} id = {dashboardposts.id} title={dashboardposts.data.title} details={dashboardposts.data.details} price={dashboardposts.data.price} date={dashboardposts.data.date} deletable={true}/>
              )
            })
 

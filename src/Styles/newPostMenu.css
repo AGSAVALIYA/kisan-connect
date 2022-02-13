@@ -2,6 +2,8 @@
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    min-width: 700px;
+    box-shadow: 10px 10px 25px 10px rgba(136, 136, 136, 0.25);
 }
 
 .newPostMenuTitle{
@@ -37,4 +39,8 @@
     justify-content: center;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.postButton:hover{
+    background-color: #6abed1;
 }

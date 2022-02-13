@@ -3,6 +3,7 @@ import '../Styles/newPostMenu.css'
 import {getFirestore, collection, addDoc} from 'firebase/firestore';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {useNavigate} from 'react-router-dom';
 
 function NewPostMenu({setNewPostMenuOpen}) {
     const [title, setTitle] = useState('')
@@ -11,6 +12,8 @@ function NewPostMenu({setNewPostMenuOpen}) {
     const [date, setDate] = useState(null);
     
     const db = getFirestore();
+
+    let navigate = useNavigate();
 
     const createNewPost = async () => {
         if(title, details, price, date){
@@ -23,6 +26,8 @@ function NewPostMenu({setNewPostMenuOpen}) {
                 date: date,
                 userEmail: sessionStorage.getItem('User Email')
             });
+
+            navigate('/')
         }else{
             toast.error('All required fields are not filled')
         }

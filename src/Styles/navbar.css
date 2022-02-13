@@ -16,12 +16,15 @@ nav {
     left: 0;
     right: 0;
     height: 50px;
+    box-shadow: 10px 10px 25px 10px rgba(136, 136, 136, 0.25);
 }
 
 .brand-name {
     font-size: 30px;
     margin: 0.5rem;
     padding: 5px;
+    text-decoration: none;
+    color: white;
 }
 
 .hamburger {
@@ -37,6 +40,7 @@ nav {
 .navLinks {
     display: flex;
     font-size: 20px;
+    transition: all 0.5s;
 }
 .link {
     text-decoration: none;
@@ -54,6 +58,8 @@ nav {
 
 .logoutButton:hover{
     background-color: #6abed1;
+    color: red;
+    cursor: pointer;
 }
 button {
     border: 0px;

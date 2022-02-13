@@ -22,7 +22,7 @@ const Navbar = () =>{
     return(
         <nav>
             <div>
-                <div className="brand-name">Kisan Connect</div>
+                <Link className="brand-name" to = '/'>Kisan Connect</Link>
                 <button href="#" className="hamburger" onClick={onClickHamburger}>
                     <FeatherIcon className='menu' icon="menu" color="#FFF" size={36}/> 
                 </button>

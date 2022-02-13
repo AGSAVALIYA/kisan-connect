@@ -10,7 +10,7 @@ const PostList = ({search}) =>{
         const q = query(collectionGroup(db, "posts"))
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            setPosts(arr => [...arr ,doc.data()])
+            setPosts(arr => [...arr ,{id: doc.id, data: doc.data()}])
             
         }); 
     }
@@ -18,17 +18,18 @@ const PostList = ({search}) =>{
     useEffect(() => {
         getPosts();
     }, [])
-
     
-    const postarray = posts.map((posts)=>{
+    const postarray = posts.map((post)=>{
         if(search){
-            if(posts.title){
-                
+            if(post.title.toLowerCase().includes(search.toLowerCase()) || post.details.toLowerCase().includes(search.toLowerCase())){
+                return(
+                    <Post key={post.id} id = {post.id} title={post.data.title} details={post.data.details} price={post.data.price} date={post.data.date} deletable={false}/>
+                )
             }
         }
         else{
             return(
-                <Post key={posts.id} title={posts.title} details={posts.details} price={posts.price} date={posts.date}/>
+                <Post key={post.id} id = {post.id} title={post.data.title} details={post.data.details} price={post.data.price} date={post.data.date} deletable = {false}/>
             )
         }
     })
