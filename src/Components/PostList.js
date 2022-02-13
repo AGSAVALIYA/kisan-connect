@@ -21,7 +21,7 @@ const PostList = ({search}) =>{
     
     const postarray = posts.map((post)=>{
         if(search){
-            if(post.title.toLowerCase().includes(search.toLowerCase()) || post.details.toLowerCase().includes(search.toLowerCase())){
+            if(post.data.title.toLowerCase().includes(search.toLowerCase()) || post.data.details.toLowerCase().includes(search.toLowerCase())){
                 return(
                     <Post key={post.id} id = {post.id} title={post.data.title} details={post.data.details} price={post.data.price} date={post.data.date} deletable={false}/>
                 )

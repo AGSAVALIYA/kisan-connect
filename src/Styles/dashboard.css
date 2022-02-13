@@ -54,7 +54,7 @@
 }
 
 .dashContainer{
-     min-width: 500px; 
+     min-width: 390px; 
 }
 @media (min-width: 577px) and (max-width: 991px) {
     .dashhead {
